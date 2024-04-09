@@ -1,0 +1,46 @@
+<div class="home-container">
+  <div class="catalog-box">
+    <div class="catalog-header">
+      <div class="title-container">
+        <h1 class="title">Recipe<span class="orange-text">Flix</span></h1>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Buscar receitas..."
+          class="search-input"
+        />
+      </div>
+      <div class="button-container">
+        <a href="/recipe"
+          ><button type="button" class="btn btn-primary button-add-recipe">
+            Envie sua receita
+          </button></a
+        >
+        <button type="button" class="btn btn-primary button-add-recipe" (click)="logout()">
+            Logout <i class="fas fa-sign-out-alt"></i>
+          </button>
+      </div>
+    </div>
+
+    <h2>Receitas</h2>
+    <!-- Loop para exibir todas as receitas -->
+    <div class="recipe-cards-container">
+        <div *ngFor="let recipe of recipes" class="recipe-card">
+          <img [src]="recipe.image" alt="Imagem da receita" class="recipe-image" />
+          <h4>{{ recipe.title }}</h4>
+          <p>Descrição: {{ recipe.description }}</p>
+          <p>Autor: {{ recipe.authorName}}</p>
+          <p>Instruções:</p>
+          <ul>
+            <li>{{ recipe.instructions }}</li>
+          </ul>
+        </div>
+      </div>
+      
+    <!-- Caso não haja receitas -->
+    <div *ngIf="recipes.length === 0">
+      <p>Nenhuma receita disponível no momento.</p>
+    </div>
+  </div>
+</div>

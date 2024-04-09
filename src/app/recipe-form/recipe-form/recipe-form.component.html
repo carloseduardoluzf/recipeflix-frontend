@@ -1,0 +1,68 @@
+<div class="recipe-container">
+  <div class="box-form">
+    <div><button class="btn btn-primary btn-back" (click)="goBack()">
+      <i class="fa-solid fa-arrow-left"></i> Voltar
+    </button></div>
+    
+    <div class="text-center"><h1 class="title">Crie sua <span class="orange-text">Receita</span></h1></div>
+    <form (ngSubmit)="createRecipe()" #recipeForm="ngForm">
+      <div class="mb-3">
+        <label for="title" class="form-label">Título<b *ngIf="recipeForm.controls['title']?.hasError('required')" class="text-danger">*</b></label>
+        <input
+          type="text"
+          class="input-recipe"
+          id="title"
+          name="title"
+          [(ngModel)]="recipe.title"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Descrição<b *ngIf="recipeForm.controls['description']?.hasError('required')" class="text-danger">*</b></label>
+        <textarea
+          class="input-recipe"
+          id="description"
+          name="description"
+          [(ngModel)]="recipe.description"
+          required
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">URL da imagem<b *ngIf="recipeForm.controls['image']?.hasError('required')" class="text-danger">*</b></label>
+        <input
+          type="text"
+          class="input-recipe"
+          id="image"
+          name="image"
+          [(ngModel)]="recipe.image"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="instructions" class="form-label">Instruções<b *ngIf="recipeForm.controls['instructions']?.hasError('required')" class="text-danger">*</b></label>
+        <textarea
+          class="input-recipe"
+          id="instructions"
+          name="instructions"
+          [(ngModel)]="recipe.instructions"
+          required
+        ></textarea>
+      </div>
+      <input
+        type="hidden"
+        class="form-control input-recipe"
+        id="authorName"
+        name="authorName"
+        [(ngModel)]="recipe.authorName"
+        required
+      />
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-receita">Criar Receita</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="custom-alert" *ngIf="successMessage">
+    Receita adicionada com sucesso!
+  </div>
+</div>

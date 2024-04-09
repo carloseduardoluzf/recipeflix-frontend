@@ -1,0 +1,130 @@
+.recipe-container {
+    background-image: url('src\assets\prato-de-tigela-de-buda-com-legumes-e-legumes-vista-do-topo.jpg');
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    height: 100vh;; /* Define a altura da div como 100% da altura da viewport */
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff6a28; /* Cor verde */
+    color: white; /* Cor do texto branco */
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    animation: fadeOut 10s forwards; /* Animação de fadeOut */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1; /* Começa com opacidade total */
+    }
+    100% {
+      opacity: 0; /* Termina com opacidade zero */
+      visibility: hidden; /* Esconde o elemento */
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo escuro com opacidade */
+    z-index: 9999;
+  }
+  
+  .spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; /* posição acima da camada de fundo */
+  }
+
+  .input-recipe{
+    height: 45px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    background-image: linear-gradient(to right, #FF6A28 0%, #FF6A28 100%);
+    background-size: 0% 2px; /* Define o tamanho da "borda" laranja como 0 para começar */
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background-size 0.3s ease;
+    background-color: #fff3f3;
+    border-radius: 10px;
+  }
+
+  .btn-back{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    background-color: #ff6a28;
+    border: solid 1px #ff6a28 !important;
+  }
+
+  .input-recipe:focus {
+    background-size: 100% 2px; /* Define a cor da borda quando o input está focado */
+  }
+
+  .input-recipe:focus-visible {
+ /* Define a cor da borda quando o input está focado via teclado */
+    transform: scale(1.03); /* Aplica um efeito de zoom quando o input está focado */
+  }
+
+  button:hover{
+    background-color: #FF8D5B;
+  }
+
+
+  .box-form{
+    background-color: white;
+    padding: 100px 200px;
+    border-radius: 10px;
+  }
+
+.btn-receita {
+    margin-top: 10px;
+    background-color: #ff6a28;
+    border: solid 1px #ff6a28 !important;
+}
+.orange-text {
+    color: #ff6600; /* Laranja */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Adicione estilos para o subtitulo */
+  .title {
+    font-weight: bold;
+    color: #333; /* Preto */
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .mb-3 {
+    width: 400px;
+  }
+  

@@ -1,0 +1,122 @@
+.home-container {
+    background-image: url("src\assets\prato-de-tigela-de-buda-com-legumes-e-legumes-vista-do-topo.jpg");
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.catalog-box {
+    background-color: white;
+    width: 1500px;
+    max-height: 850px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.catalog-box h2{
+   text-align: center;
+   margin-bottom: 50px;
+   margin-top: 50px;
+}
+
+.catalog-header{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.button-add-recipe{
+  
+}
+
+.catalog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff; /* Cor de fundo do header */
+  }
+  
+  .title {
+    color: black; /* Cor do título */
+    font-size: 2rem; /* Tamanho do título */
+    font-weight: bold; /* Peso da fonte */
+  }
+  
+  .orange-text {
+    color: #FF6A28; /* Cor do texto laranja */
+  }
+  
+  .search-container {
+    flex: 1; /* Ocupa todo o espaço restante */
+    margin: 0 20px; /* Margem entre o título e o campo de busca */
+  }
+  
+  .search-input {
+    width: 100%; /* Ocupa todo o espaço disponível */
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(255,106,40,.5);
+    border: 1px solid #e8e8e8;
+    border-radius: 0.375rem;
+  }
+  
+  .button-container {
+    margin-left: 20px; /* Margem entre o campo de busca e o botão */
+  }
+
+  .button-container button {
+    margin-left: 20px; /* Margem entre o campo de busca e o botão */
+    align-items: center;
+  }
+
+  .button-add-recipe {
+    background-color: #ff6a28;
+    border: none;
+    font-weight: 500;
+  }
+.recipe-cards-container {
+    display: flex; /* exibir os cards lado a lado */
+    flex-wrap: wrap; /* permitir que os cards quebrem para a próxima linha */
+    justify-content: center; /* centralizar os cards horizontalmente */
+  }
+  
+  .recipe-card {
+    width: 300px; /* largura do card */
+    margin: 15px 15px; /* margem entre os cards */
+    padding: 20px; /* espaçamento interno do card */
+    border: 6px solid #ff6a28; /* borda do card */
+    border-radius: 8px; /* arredondamento das bordas */
+    background-color: #ffe8de;
+  }
+  
+  .recipe-title {
+    font-size: 16px; /* tamanho do título da receita */
+    font-weight: bold; /* peso da fonte */
+  }
+  
+  .recipe-description {
+    font-size: 12px; /* tamanho da descrição da receita */
+    color: #666; /* cor do texto da descrição */
+  }
+
+  
+
+  .recipe-cards-container{
+    margin-top: 10px;
+  }
+
+  .recipe-cards-container h5{
+    margin-top: 10px;
+  }
+
+  .recipe-image {
+    border-radius: 0.375rem;
+    border: 2px solid white;
+    width: 65%; /* Define a largura da imagem como 100% do container pai (o card) */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente para manter a proporção */
+  }

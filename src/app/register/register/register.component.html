@@ -1,0 +1,93 @@
+<div class="register-container">
+  <div class="box-form">
+    <h1 class="title">Recipe<span class="orange-text">Flix</span></h1>
+    <form
+      (ngSubmit)="register()"
+      [formGroup]="registerForm"
+      class="register-form"
+    >
+      <h2 class="register-title">Cadastro</h2>
+      <div class="mb-3">
+        <label for="username" class="form-label"
+          >Usuário<b
+            *ngIf="registerForm.get('username')?.hasError('required')"
+            class="text-danger"
+          >
+            *</b
+          ></label
+        >
+        <input
+          formControlName="username"
+          class="input-register"
+          id="username"
+          [(ngModel)]="user.username"
+          name="username"
+          placeholder="myusername"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label"
+          >Senha<b
+            *ngIf="registerForm.get('password')?.hasError('required')"
+            class="text-danger"
+          >
+            *</b
+          ></label
+        >
+        <input
+          formControlName="password"
+          class="input-register"
+          id="password"
+          [(ngModel)]="user.password"
+          name="password"
+          type="password"
+          placeholder="mypassword"
+          minlength="8"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('password')?.invalid &&
+            (registerForm.get('password')?.dirty ||
+              registerForm.get('password')?.touched)
+          "
+          class="text-danger"
+        >
+          <p>* A senha deve ter pelo menos 8 caracteres.</p>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="authorName" class="form-label">Nome do Autor<b *ngIf="registerForm.get('authorName')?.hasError('required')"class="text-danger">*</b></label>
+        <input
+          formControlName="authorName"
+          class="input-register"
+          id="authorName"
+          [(ngModel)]="user.authorName"
+          name="authorName"
+          placeholder="myauthorname"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary w-100 button-submit">
+        Cadastrar
+      </button>
+      <span class="span-redirect"
+        >Já possui uma conta?<a class="redirect-login" href="/login"
+          >Faça login.</a
+        ></span
+      >
+    </form>
+  </div>
+
+  <div class="overlay" [hidden]="!loading"></div>
+
+  <div class="spinner-container" [hidden]="!loading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="custom-alert" *ngIf="successMessage">
+    Cadastro realizado com sucesso! Faça o login.
+  </div>
+</div>

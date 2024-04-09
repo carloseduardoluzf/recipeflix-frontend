@@ -1,0 +1,29 @@
+<div class="login-container">
+  <div class="box-form">
+    <h1 class="title">Recipe<span class="orange-text">Flix</span></h1>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+      <h2 class="title-login">Login</h2>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username <b *ngIf="loginForm.get('username')?.errors?.required" class="text-danger"> *</b></label>
+        <input formControlName="username" class="input-login" id="username" placeholder="myusername" required />
+      
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password <b *ngIf="loginForm.get('password')?.errors?.required" class="text-danger"> *</b></label>
+        <input formControlName="password" class="input-login" id="password" type="password" placeholder="mypassword" required />
+      </div>
+      <button type="submit" class="btn btn-primary w-100 button-submit" [disabled]="loading">Login</button>
+      <span class="span-redirect">Não possui uma conta? <a class="redirect-register" href="/register">Cadastre-se.</a></span>
+    </form>
+  </div>
+  <div class="overlay" [hidden]="!loading"></div>
+
+  <div class="spinner-container" [hidden]="!loading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="custom-alert" *ngIf="successMessage">
+    Usuário autenticado! Entrando na plataforma...
+  </div>
+</div>

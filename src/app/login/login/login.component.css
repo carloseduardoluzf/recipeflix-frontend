@@ -1,0 +1,161 @@
+.login-container {
+    background-image: url('src\assets\prato-de-tigela-de-buda-com-legumes-e-legumes-vista-do-topo.jpg');
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    height: 100vh;; /* Define a altura da div como 100% da altura da viewport */
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff6a28; /* Cor verde */
+    color: white; /* Cor do texto branco */
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    animation: fadeOut 10s forwards; /* Animação de fadeOut */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1; /* Começa com opacidade total */
+    }
+    100% {
+      opacity: 0; /* Termina com opacidade zero */
+      visibility: hidden; /* Esconde o elemento */
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo escuro com opacidade */
+    z-index: 9999;
+  }
+  
+  .spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; /* posição acima da camada de fundo */
+  }
+  
+  .box-form{
+    background-color: white;
+    padding: 100px 60px;
+    border-radius: 10px;
+  }
+
+  .span-redirect {
+    font-size: 16px; 
+    font-weight: 700;
+    color: #212529; 
+    margin-top: 10px; 
+    
+  }
+
+  .button-submit{
+    margin-top: 10px;
+  }
+  
+  .redirect-register {
+    color: #ff6a28; /* Cor do link */
+    text-decoration: none; /* Remover sublinhado padrão */
+    margin-left: 5px; /* Espaçamento à esquerda */
+  }
+  
+  .redirect-register :hover {
+    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+  }
+
+  .input-login{
+    height: 45px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    background-image: linear-gradient(to right, #FF6A28 0%, #FF6A28 100%);
+    background-size: 0% 2px; /* Define o tamanho da "borda" laranja como 0 para começar */
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background-size 0.3s ease;
+    background-color: #fff3f3;
+    border-radius: 10px;
+  }
+
+  .input-login:focus {
+    background-size: 100% 2px; /* Define a cor da borda quando o input está focado */
+  }
+
+  .input-login:focus-visible {
+ /* Define a cor da borda quando o input está focado via teclado */
+    transform: scale(1.03); /* Aplica um efeito de zoom quando o input está focado */
+  }
+
+  .title {
+    text-align: center;
+    font-size: 3.5rem; /* Tamanho grande da fonte */ 
+    font-weight: 700;
+    margin-bottom: 100px;
+  }
+  
+  .orange-text {
+    color: #FF6A28; /* Cor laranja */
+  }
+
+  .form-label {
+    font-weight: 400;
+    font-size: 16px;
+    ;
+  }
+
+ ::placeholder {
+    font-size: 14px;
+  }
+
+  button {
+    background-color: #ff6a28;
+    border: solid 1px #ff6a28 !important;
+  }
+
+  button:hover{
+    background-color: #FF8D5B;
+  }
+
+  .title-login{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  .mb-3 {
+    width: 400px;
+  }
+  
